@@ -1,0 +1,33 @@
+{
+  "name": "electron-template",
+  "version": "0.0.0",
+  "description": "my electron app",
+  "main": "app/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "NODE_ENV=production gulp serve",
+    "pack" : "electron-packager . appname --platform=darwin --arch=x64 --overwrite "
+  },
+  "keywords": [
+    "electron"
+  ],
+  "author": "nyamogera <nyamogera＠gmail.com> (nyamogera.net)",
+  "license": "MIT",
+  "dependencies": {
+    "electron-connect": "^0.3.4",
+    "electron-prebuilt": "^0.36.2",
+    "electron-window-state": "^2.0.0",
+    "gulp": "^3.9.0",
+    "textlint-rule-no-mix-dearu-desumasu": "^1.4.0"
+  },
+  "devDependencies": {
+    "electron-packager": "^5.2.1",
+    "gulp-preprocess": "^2.0.0",
+    "spellcheck-tech-word-textlint-rule": "^3.0.0",
+    "textlint": "^5.3.1",
+    "textlint-rule-no-mix-dearu-desumasu": "^1.4.0",
+    "textlint-rule-preset-japanese": "^1.0.3",
+    "textlint-rule-preset-jtf-style": "^2.0.0",
+    "typings": "^0.6.8"
+  }
+}

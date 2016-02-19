@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>タイトル</title>
+</head>
+<body>
+<script src="index.js"></script>
+<script>
+    if( process.env.NODE_ENV === 'production' ){
+        require('electron-connect').client.create();
+    }
+
+</script>
+  <div id="console"></div>
+テンプレです
+</body>
+</html>
