@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "NODE_ENV=production gulp serve",
-    "pack" : "electron-packager . appname --platform=darwin --arch=x64 --overwrite "
+    "pack": "electron-packager . appname --platform=darwin --arch=x64 --overwrite "
   },
   "keywords": [
     "electron"
@@ -18,7 +18,9 @@
     "electron-prebuilt": "^0.36.2",
     "electron-window-state": "^2.0.0",
     "gulp": "^3.9.0",
-    "textlint-rule-no-mix-dearu-desumasu": "^1.4.0"
+    "textlint-rule-no-mix-dearu-desumasu": "^1.4.0",
+    "textlint-rule-preset-japanese": "^1.0.3",
+    "textlint-rule-prh": "^2.3.0"
   },
   "devDependencies": {
     "electron-packager": "^5.2.1",

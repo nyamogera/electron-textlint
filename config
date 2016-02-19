@@ -1,0 +1,15 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+	ignorecase = true
+[user]
+	name = nyamogera
+	email = nyamogera@gmail.com
+[remote "origin"]
+	url = https://github.com/nyamogera/electron-textlint.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
