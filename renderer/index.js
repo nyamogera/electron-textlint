@@ -1,3 +1,4 @@
+/// <reference path="../typings/main.d.ts" />
 window.addEventListener("load", init);
 function init() {
     var textlint = require("textlint").textlint;
@@ -12,6 +13,24 @@ function init() {
             ]
         }
     };
+    var marked = require('marked');
+    var renderer = new marked.Renderer();
+    renderer.strong = function (text) {
+        return "hoge";
+    };
+    renderer.em = function (text) {
+        return "hoge";
+    };
+    renderer.code = function (code, language) {
+        if (language == "@meta") {
+            return "メタタイトルだよ～ん";
+        }
+        return "hoge";
+    };
+    marked.setOptions({
+        renderer: renderer
+    });
+    console.log(marked('I am using __markdown__.'));
     Object.assign(rules, presetJapanese.rules);
     Object.assign(ruleConfig, presetJapanese.ruleConfig);
     textlint.setupRules(rules, ruleConfig);
@@ -21,6 +40,12 @@ function init() {
             console.log(results.messages[0].message); // => [{message:"lint message"}]
             errors.push(results.messages[i].line + " : " + results.messages[i].message);
         }
+        var mytext = [
+            "```@meta",
+            "タイトルテキスト",
+            "```"
+        ].join("\n\n");
+        errors.push(marked("__it's markdown.__ let's markdown. \n" + mytext + " "));
         document.getElementById("console").innerHTML = errors.join("<br>");
     });
 }

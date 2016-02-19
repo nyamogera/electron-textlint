@@ -1,6 +1,9 @@
 {
   "name": "electron-template",
-  "dependencies": {
-  },
-  "devDependencies": {}
+  "dependencies": {},
+  "devDependencies": {},
+  "ambientDependencies": {
+    "marked": "github:DefinitelyTyped/DefinitelyTyped/marked/marked.d.ts#4de74cb527395c13ba20b438c3a7a419ad931f1c",
+    "node": "github:DefinitelyTyped/DefinitelyTyped/node/node.d.ts#263705d313346e093d95cb62cef6fed848e46978"
+  }
 }
